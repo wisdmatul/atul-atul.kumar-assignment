@@ -1,0 +1,162 @@
+git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/atul/gitexam/.git/
+atul@atul-HP-ProBook-440-G4:~/gitexam$ git clone o https://github.com/firstcontributions/first-contributions
+fatal: repository 'o' does not exist
+atul@atul-HP-ProBook-440-G4:~/gitexam$ git clone https://github.com/WisdmLabs/moodle-format_remuiformat
+Cloning into 'moodle-format_remuiformat'...
+remote: Enumerating objects: 3325, done.
+remote: Counting objects: 100% (455/455), done.
+remote: Compressing objects: 100% (210/210), done.
+remote: Total 3325 (delta 288), reused 319 (delta 245), pack-reused 2870
+Receiving objects: 100% (3325/3325), 1008.61 KiB | 10.62 MiB/s, done.
+Resolving deltas: 100% (2301/2301), done.
+atul@atul-HP-ProBook-440-G4:~/gitexam$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	moodle-format_remuiformat/
+
+nothing added to commit but untracked files present (use "git add" to track)
+atul@atul-HP-ProBook-440-G4:~/gitexam$ git add -A
+warning: adding embedded git repository: moodle-format_remuiformat
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> moodle-format_remuiformat
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached moodle-format_remuiformat
+hint: 
+hint: See "git help submodule" for more information.
+atul@atul-HP-ProBook-440-G4:~/gitexam$ git commit -a -m "first commit"
+[master (root-commit) a89a4f8] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 160000 moodle-format_remuiformat
+atul@atul-HP-ProBook-440-G4:~/gitexam$ git status
+On branch master
+nothing to commit, working tree clean
+atul@atul-HP-ProBook-440-G4:~/gitexam$ cd moodle-format_remuiformat
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add .
+git commit -m "Commit message describing your changes"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push origin master 
+Username for 'https://github.com': atul
+Password for 'https://atul@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/WisdmLabs/moodle-format_remuiformat/'
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ cp ~/repository/file.txt ~/Documents/new_directory/
+cp: cannot stat '/home/atul/repository/file.txt': No such file or directory
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git remote add origin git@github.com:wisdmatul/atul-atul.kumar-assignment.git
+error: remote origin already exists.
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git remote set-url origin git@github.com:wisdmatul/atul-atul.kumar-assignment.git
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push -u origin
+Enumerating objects: 2891, done.
+Counting objects: 100% (2891/2891), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (748/748), done.
+Writing objects: 100% (2891/2891), 788.92 KiB | 3.30 MiB/s, done.
+Total 2891 (delta 2053), reused 2858 (delta 2036), pack-reused 0
+remote: Resolving deltas: 100% (2053/2053), done.
+To github.com:wisdmatul/atul-atul.kumar-assignment.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ touch readme.md
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git branch test110123
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add -A
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git commit -m"commit to add the files"
+[master f540035] commit to add the files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push -u origin
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 273 bytes | 273.00 KiB/s, done.
+Total 3 (delta 1), reused 1 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:wisdmatul/atul-atul.kumar-assignment.git
+   03d7293..f540035  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git rebase main test110123
+fatal: invalid upstream 'main'
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git branch
+* master
+  test110123
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git rebase master test110123
+Successfully rebased and updated refs/heads/test110123.
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push -u origin
+fatal: The current branch test110123 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test110123
+
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ touch git-assignment.txt
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git branch git-test
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add git-assignment.txt git-test
+fatal: pathspec 'git-test' did not match any files
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add -A git-test
+fatal: pathspec 'git-test' did not match any files
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add -A 
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git commit -m"last commit"
+[test110123 e46a45d] last commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git-assignment.txt
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push -u origin
+fatal: The current branch test110123 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test110123
+
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push -u origin
+fatal: The current branch test110123 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin test110123
+
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git checkout git-test
+Switched to branch 'git-test'
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add git-assignment.txt
+fatal: pathspec 'git-assignment.txt' did not match any files
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add git-assignment.txt
+fatal: pathspec 'git-assignment.txt' did not match any files
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git add git-assignment.txt
+fatal: pathspec 'git-assignment.txt' did not match any files
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ git push -u origin
+fatal: The current branch git-test has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin git-test
+
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuiformat$ touch git-assignment.txt
+atul@atul-HP-ProBook-440-G4:~/gitexam/moodle-format_remuifor
